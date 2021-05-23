@@ -2,4 +2,6 @@
     <string name="app_name">BISINDO</string>
     <string name="number">NUMBER</string>
     <string name="number_english">ONE</string>
+    <string name="home">Home</string>
+    <string name="Camera">Camera</string>
 </resources>
