@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="downy">#76CDC2</color>
+    <color name="sweet_pink">#F79CA1</color>
+
+    <color name="nelson">#B2E3FF</color>
+    <color name="nelson_700">#4abdff</color>
+
+    <color name="black_teal">#0B2A32</color>
 </resources>
