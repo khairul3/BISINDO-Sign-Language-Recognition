@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Bisindo Sign Languange Recognition</string>
+    <string name="app_name">BISINDO</string>
+    <string name="number">NUMBER</string>
+    <string name="number_english">ONE</string>
 </resources>
