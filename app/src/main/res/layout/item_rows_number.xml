@@ -72,7 +72,6 @@
             app:layout_constraintStart_toStartOf="@+id/img_poster"
             app:layout_constraintTop_toBottomOf="@+id/txt_title"
             tools:srcCompat="@tools:sample/avatars" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
