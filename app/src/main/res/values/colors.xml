@@ -7,7 +7,7 @@
     <color name="black_teal">#0B2A32</color>
     <color name="colorPrimary">#141A31</color>
     <color name="colorPrimaryDark">#081029</color>
-    <color name="colorAccent">#0097fb</color>
+    <color name="colorAccent">#e7dfff</color>
     <color name="colorTextIcons">#ffffff</color>
     <color name="colorPrimaryLight">#1e2746</color>
     <color name="colorTextPrimary">#cbd5ed</color>
@@ -35,4 +35,11 @@
     <color name="white2">#BEFFFFFF</color>
     <color name="colorBackground">#000000</color>
     <color name="color_tabs">#69BDFF</color>
+    <color name="lightBlue">#81D4FA</color>
+    <color name="lightpurple">#e7dfff</color>
+
+
+
+    <color name="cardColor">#ffffff</color>
+    <color name="textcardColor">#3f3f3f</color>
 </resources>

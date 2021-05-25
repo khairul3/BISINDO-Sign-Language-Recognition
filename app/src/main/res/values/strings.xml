@@ -6,4 +6,9 @@
     <string name="Camera">Camera</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="num">1</string>
+    <string name="open">OPEN</string>
+    <string name="dictionary">Kamus</string>
+    <string name="numbers">Angka</string>
+    <string name="other">Fitur Lain</string>
 </resources>
