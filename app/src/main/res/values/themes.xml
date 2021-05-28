@@ -6,6 +6,8 @@
         <item name="colorPrimaryDark">@color/colorTextPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
 
+        <item name="android:windowBackground">@color/windowsBackgroud</item>
+
     </style>
 
     <style name="PrimaryButtonStyle" parent="@style/Widget.MaterialComponents.Button">
@@ -38,4 +40,17 @@
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Text" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black1</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black1</item>
+    </style>
 </resources>

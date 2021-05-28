@@ -11,4 +11,7 @@
     <string name="dictionary">Kamus</string>
     <string name="numbers">Angka</string>
     <string name="other">Fitur Lain</string>
+    <string name="desc_detail">Description</string>
+    <string name="title">Title</string>
+    <string name="imageDetail">Image Detail</string>
 </resources>
