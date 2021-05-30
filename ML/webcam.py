@@ -6,7 +6,7 @@ mp_drawing = mp.solutions.drawing_utils
 
 # read from webcam
 # you can choose the used webcam (if you have other than one) by changing the number (0 default)
-camera_num = 1
+camera_num = 0
 capture = cv.VideoCapture(camera_num)
 while True:
     isTrue, frame = capture.read() 
