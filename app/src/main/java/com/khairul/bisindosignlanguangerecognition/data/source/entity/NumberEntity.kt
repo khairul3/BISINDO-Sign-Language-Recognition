@@ -1,4 +1,5 @@
 package com.khairul.bisindosignlanguangerecognition.data.source.entity
 
-class NumberEntity {
-}
+data class NumberEntity (
+    val postAuthor: String? = null
+)

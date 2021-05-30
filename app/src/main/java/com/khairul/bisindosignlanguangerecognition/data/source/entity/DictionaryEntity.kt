@@ -1,5 +1,7 @@
 package com.khairul.bisindosignlanguangerecognition.data.source.entity
 
-class DictionaryEntity {
+data class DictionaryEntity (
+    val alphabet:String?=null,
 
-}
+        )
+
