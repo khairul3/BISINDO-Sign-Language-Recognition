@@ -1,5 +1,5 @@
 # import module
-import cv2 as cv
+import cv2 as cv 
 import mediapipe as mp
 import time
 import numpy as np
@@ -243,12 +243,12 @@ captureTime = 0
 # you can choose the used webcam (if you have other than one) by changing the number (0 default)
 camera_num = 1
 # name your csv files
-filename = 'train.csv'
+filename = 'faqih_train.csv'
 initiate_csv(filename, fields)
 # read from webcam
 capture = cv.VideoCapture(camera_num)
 # you can set your delay time for capturing image
-delay = 0
+delay = 3
 
 # main loop
 while True:
@@ -316,9 +316,7 @@ while True:
                         label = key
                         print(f'Label: {key}')
                         time.sleep(1)
-
-        # isCapture, isBreak, label = keyCallback(keyPressed)
-        
+                        
         # break if needed
         if isBreak:
             break
