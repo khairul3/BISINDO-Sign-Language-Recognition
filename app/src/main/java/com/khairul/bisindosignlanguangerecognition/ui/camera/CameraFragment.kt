@@ -1,4 +1,4 @@
-package com.khairul.bisindosignlanguangerecognition.ui
+package com.khairul.bisindosignlanguangerecognition.ui.camera
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
