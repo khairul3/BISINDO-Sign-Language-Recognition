@@ -9,7 +9,7 @@
     tools:context=".ui.dictionary.DictionaryFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_number"
+        android:id="@+id/rv_dic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"

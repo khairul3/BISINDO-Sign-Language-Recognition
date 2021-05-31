@@ -44,7 +44,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/img_cam"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_140sdp"
                     android:layout_marginStart="16dp"
@@ -161,7 +161,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <Button
-                        android:id="@+id/button1"
+                        android:id="@+id/btn_dictionary"
                         style="@style/PrimaryButtonStyle2"
                         android:layout_marginStart="@dimen/_12ssp"
                         android:layout_marginEnd="@dimen/_12ssp"
@@ -241,7 +241,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/btn_number"
                         style="@style/PrimaryButtonStyle"
                         android:layout_marginStart="@dimen/_12ssp"
                         android:layout_marginEnd="@dimen/_12ssp"
