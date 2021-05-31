@@ -5,6 +5,7 @@ buildscript {
         sdpAndroidVersion = '1.0.6'
         sspAndroidVersion = '1.0.6'
         kotlin_version = '1.5.10'
+        glide_version = "4.12.0"
 
     }
 

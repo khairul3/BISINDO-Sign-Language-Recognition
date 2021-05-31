@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.khairul.bisindosignlanguangerecognition.R
 
 class DictionaryFragment : Fragment() {
-    // TODO: Rename and change types of parameters
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

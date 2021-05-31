@@ -33,6 +33,7 @@
             android:background="@color/sweet_pink"
             android:padding="4dp"
             android:text="@string/number"
+            android:gravity="center"
             android:textAlignment="center"
             android:textColor="@color/black_teal"
             android:textSize="12sp"
@@ -40,33 +41,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/img_poster" />
 
-        <TextView
-            android:id="@+id/txt_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/num"
-            android:textSize="28sp"
-            app:layout_constraintBottom_toBottomOf="@+id/txt_title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/txt_number_english"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/number_english"
-            app:layout_constraintBottom_toBottomOf="@+id/txt_title"
-            app:layout_constraintEnd_toEndOf="@+id/txt_title"
-            app:layout_constraintHorizontal_bias="0.38"
-            app:layout_constraintStart_toEndOf="@+id/txt_number"
-            app:layout_constraintTop_toTopOf="@+id/txt_title"
-            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/img_sketsa"
             android:layout_width="134dp"
             android:layout_height="127dp"
+            android:contentDescription="@string/number"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/img_poster"
             app:layout_constraintStart_toStartOf="@+id/img_poster"

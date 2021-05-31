@@ -37,6 +37,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    buildFeatures {
+        viewBinding = true
+        }
 }
 
 dependencies {
@@ -61,6 +64,13 @@ dependencies {
 
     // FirebaseUI for Cloud Firestore
     implementation 'com.firebaseui:firebase-ui-firestore:7.1.1'
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+
+
 
 
 }

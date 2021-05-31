@@ -24,8 +24,8 @@
             app:titleTextColor="@android:color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView3"
+    <FrameLayout
+        android:id="@+id/containerID"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_70sdp"
@@ -107,7 +107,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginBottom="16dp"
                             android:background="@drawable/background_white"
@@ -150,7 +149,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="8dp"
                             android:text="Cloud"
                             android:textStyle="bold"
@@ -165,6 +163,7 @@
                         style="@style/PrimaryButtonStyle2"
                         android:layout_marginStart="@dimen/_12ssp"
                         android:layout_marginEnd="@dimen/_12ssp"
+                        android:textSize="@dimen/_12ssp"
                         android:background="@drawable/background_btn1"
                         android:enabled="true"
                         android:text="@string/open"
@@ -188,7 +187,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginBottom="16dp"
                             android:background="@drawable/background_white"
@@ -206,6 +204,7 @@
                                 android:layout_marginEnd="12dp"
                                 android:layout_marginRight="12dp"
                                 android:layout_marginBottom="12dp"
+                                android:contentDescription="@string/img_iconAngka"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -246,6 +245,8 @@
                         android:layout_marginStart="@dimen/_12ssp"
                         android:layout_marginEnd="@dimen/_12ssp"
                         android:enabled="true"
+                        android:textSize="@dimen/_12ssp"
+
                         android:background="@drawable/background_btn2"
                         android:text="@string/open"
                         app:backgroundTint="@null" />
@@ -255,7 +256,7 @@
             </LinearLayout>
         </LinearLayout>
 
-    </ScrollView>
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
@@ -270,7 +271,7 @@
         app:itemRippleColor="@color/green"
         app:itemTextColor="@color/selector_bottom_navigation"
         app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+        app:layout_constraintBottom_toBottomOf="@+id/containerID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"

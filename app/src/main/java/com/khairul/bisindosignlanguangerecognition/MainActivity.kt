@@ -3,23 +3,22 @@ package com.khairul.bisindosignlanguangerecognition
 import android.content.Intent
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.khairul.bisindosignlanguangerecognition.databinding.ActivityMain1Binding
-import com.khairul.bisindosignlanguangerecognition.ui.CameraFragment
 import com.khairul.bisindosignlanguangerecognition.ui.dictionary.DictionaryFragment
 import com.khairul.bisindosignlanguangerecognition.ui.number.NumberFragment
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMain1Binding
 
     private val onNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> MainActivity()
-                R.id.nav_camera -> loadFragment(CameraFragment())
+                R.id.nav_camera -> loadCam()
             }
             true
         }
@@ -30,31 +29,35 @@ class MainActivity : AppCompatActivity() {
         val navigationView: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
         navigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
-        binding.imgCam.setOnClickListener {
-            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivity(intent)
+        val imgCam = findViewById<ImageView>(R.id.img_cam)
+        val btnDictionary = findViewById<Button>(R.id.btn_dictionary)
+        val btnNumber = findViewById<Button>(R.id.btn_number)
+
+        imgCam.setOnClickListener {
+            loadCam()
         }
 
-        binding.btnDictionary.setOnClickListener {
-            val fragment: Fragment = DictionaryFragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.rv_dic, fragment)
-                .commit()
+        btnDictionary.setOnClickListener {
+            loadFragment(DictionaryFragment())
         }
 
-        binding.btnNumber.setOnClickListener {
+        btnNumber.setOnClickListener {
             val fragment: Fragment = NumberFragment()
             supportFragmentManager.beginTransaction()
                 .replace(R.id.rv_number, fragment)
                 .commit()
         }
+    }
 
+    private fun loadCam() {
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivity(intent)
     }
 
     private fun loadFragment(fragment: Fragment?): Boolean {
         if (fragment != null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
+                .replace(R.id.containerID, fragment)
                 .commit()
             return true
         }

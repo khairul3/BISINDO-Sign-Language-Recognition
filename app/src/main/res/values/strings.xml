@@ -14,4 +14,8 @@
     <string name="desc_detail">Description</string>
     <string name="title">Title</string>
     <string name="imageDetail">Image Detail</string>
+    <string name="letter">Letter</string>
+    <string name="img_result">Result Image</string>
+    <string name="img_background">Image Background</string>
+    <string name="img_iconAngka">icon angka</string>
 </resources>
