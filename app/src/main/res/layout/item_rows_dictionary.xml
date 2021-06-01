@@ -44,8 +44,8 @@
 
         <ImageView
             android:id="@+id/img_sketsa"
-            android:layout_width="134dp"
-            android:layout_height="127dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/img_result"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/img_poster"

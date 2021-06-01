@@ -21,9 +21,8 @@ class DetailActivity : AppCompatActivity() {
         val image: ImageView = findViewById(R.id.img_backdrop)
         findViewById<TextView>(R.id.tv_title).text = entity?.label
         findViewById<TextView>(R.id.tv_desc).text = entity?.keterangan
-        Glide.with(image)
+        Glide.with(this)
             .load(entity?.gambar.toString())
             .into(image)
-
     }
 }

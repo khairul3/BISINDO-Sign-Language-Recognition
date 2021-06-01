@@ -15,6 +15,8 @@ class Entity : Parcelable {
     private constructor(parcel: Parcel) {
         label = parcel.readString()
         keterangan = parcel.readString()
+        gambar = parcel.readString()
+
     }
 
     override fun describeContents(): Int {
