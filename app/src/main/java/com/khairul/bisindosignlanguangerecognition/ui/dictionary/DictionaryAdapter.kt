@@ -29,7 +29,9 @@ class DictionaryAdapter(
 
         fun bind(snapshot: DocumentSnapshot, listener: DictionaryAdapterListener) {
             val sports: Entity? = snapshot.toObject(Entity::class.java)
-            label.text = sports?.label
+            val letter = "Huruf ${sports?.label}"
+
+            label.text = letter
             Glide.with(image)
                 .load(sports?.gambar.toString())
                 .into(image)

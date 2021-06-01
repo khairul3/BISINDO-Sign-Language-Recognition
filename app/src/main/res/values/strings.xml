@@ -18,4 +18,5 @@
     <string name="img_result">Result Image</string>
     <string name="img_background">Image Background</string>
     <string name="img_iconAngka">icon angka</string>
+    <string name="baseUrl">https://storage.googleapis.com/signlanguage-bucket2/%s</string>
 </resources>

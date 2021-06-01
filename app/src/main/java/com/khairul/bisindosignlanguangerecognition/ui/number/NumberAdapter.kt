@@ -29,7 +29,9 @@ class NumberAdapter(
 
         fun bind(snapshot: DocumentSnapshot, listener: NumberAdapterListener) {
             val sports: Entity? = snapshot.toObject(Entity::class.java)
-            label.text = sports?.label
+
+            val angka = "Angka ${sports?.label}"
+            label.text = angka
             Glide.with(image)
                 .load(sports?.gambar.toString())
                 .into(image)

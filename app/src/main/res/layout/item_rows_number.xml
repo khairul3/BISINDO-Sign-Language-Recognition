@@ -34,7 +34,6 @@
             android:gravity="center"
             android:padding="4dp"
             android:text="@string/number"
-            android:textAlignment="center"
             android:textColor="@color/black_teal"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"

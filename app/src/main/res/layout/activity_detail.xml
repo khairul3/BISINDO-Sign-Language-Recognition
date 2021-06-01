@@ -10,9 +10,8 @@
         android:id="@+id/img_backdrop"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_252sdp"
-        android:scaleType="fitXY"
-        android:background="@drawable/border_corner"
         android:contentDescription="@string/imageDetail"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +22,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_130sdp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="340dp"
         android:layout_marginEnd="8dp"
@@ -76,7 +75,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/devider" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

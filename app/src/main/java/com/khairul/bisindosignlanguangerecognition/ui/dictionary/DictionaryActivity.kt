@@ -39,9 +39,9 @@ class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdap
         adapter.startListening()
     }
 
-    override fun onSportSelected(sports: Entity?) {
+    override fun onSportSelected(entity: Entity?) {
         val intent = Intent(applicationContext, DetailActivity::class.java)
-        intent.putExtra("SPORTS_DETAIL_DATA", sports)
+        intent.putExtra("SPORTS_DETAIL_DATA", entity)
         startActivity(intent)
     }
 }
