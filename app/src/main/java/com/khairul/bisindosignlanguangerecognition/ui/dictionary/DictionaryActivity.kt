@@ -18,6 +18,9 @@ class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdap
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dictionary)
+        val actionbar = supportActionBar
+        actionbar!!.title = "ALFABET"
+        actionbar.setDisplayHomeAsUpEnabled(true)
         val query: Query = FirebaseFirestore.getInstance().collection("alfabet")
         val recyclerView: RecyclerView = findViewById(R.id.rv_dic)
         adapter = DictionaryAdapter(query, this)
@@ -43,5 +46,10 @@ class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdap
         val intent = Intent(applicationContext, DetailActivity::class.java)
         intent.putExtra("SPORTS_DETAIL_DATA", entity)
         startActivity(intent)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

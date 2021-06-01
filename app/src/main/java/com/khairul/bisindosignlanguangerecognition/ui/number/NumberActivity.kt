@@ -18,6 +18,9 @@ class NumberActivity : AppCompatActivity(), NumberAdapter.NumberAdapterListener 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_number)
+        val actionbar = supportActionBar
+        actionbar!!.title = "ANGKA"
+        actionbar.setDisplayHomeAsUpEnabled(true)
         val query: Query = FirebaseFirestore.getInstance().collection("angka")
         val recyclerView: RecyclerView = findViewById(R.id.rv_number)
         adapter = NumberAdapter(query, this)
@@ -25,7 +28,6 @@ class NumberActivity : AppCompatActivity(), NumberAdapter.NumberAdapterListener 
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
-
     }
 
     override fun onStart() {
@@ -42,5 +44,10 @@ class NumberActivity : AppCompatActivity(), NumberAdapter.NumberAdapterListener 
         val intent = Intent(applicationContext, DetailActivity::class.java)
         intent.putExtra("SPORTS_DETAIL_DATA", sports)
         startActivity(intent)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
