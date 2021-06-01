@@ -9,6 +9,8 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
+    ndkVersion "21.3.6528147"
+
 
     defaultConfig {
         applicationId "com.khairul.bisindosignlanguangerecognition"
@@ -37,12 +39,12 @@ android {
     buildFeatures {
         viewBinding = true
     }
-    buildFeatures {
-        viewBinding = true
-        }
+
 }
 
 dependencies {
+    implementation project(':utils')
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.5.0'
     implementation 'androidx.cardview:cardview:1.0.0'
@@ -71,7 +73,6 @@ dependencies {
 
     // RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.2.0'
-
 
 
 
