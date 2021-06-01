@@ -25,8 +25,8 @@ class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdap
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
-        adapter.stateRestorationPolicy =
-            RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+//        adapter.stateRestorationPolicy =
+//            RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
     }
 
     override fun onStart() {

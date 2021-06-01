@@ -2,25 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/containerID"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightpurple"
     tools:context=".MainActivity">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        tools:ignore="MissingConstraints">
-    </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_40sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,10 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_140sdp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
                     android:layout_marginBottom="16dp"
                     android:scaleType="fitXY"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -108,8 +97,8 @@
 
                             <ImageView
                                 android:id="@+id/imageView1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
                                 android:layout_marginStart="12dp"
                                 android:layout_marginLeft="12dp"
                                 android:layout_marginTop="12dp"
@@ -142,7 +131,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
-                            android:text="Cloud"
+                            android:text="@string/alphabet"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout1"
                             app:layout_constraintStart_toEndOf="@+id/constraintLayout1"
@@ -188,8 +177,8 @@
 
                             <ImageView
                                 android:id="@+id/imageView4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
                                 android:layout_marginStart="12dp"
                                 android:layout_marginLeft="12dp"
                                 android:layout_marginTop="12dp"
@@ -223,7 +212,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
-                            android:text="Network"
+                            android:text="@string/numerik"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
                             app:layout_constraintStart_toEndOf="@+id/constraintLayout"

@@ -5,18 +5,18 @@
     android:id="@+id/item_letter"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
+    android:layout_margin="6dp"
     android:background="@color/lightpurple"
     android:elevation="8dp"
-    app:cardCornerRadius="15dp">
+    app:cardCornerRadius="14dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="180dp"
+        android:layout_width="185dp"
         android:layout_height="220dp">
 
         <ImageView
             android:id="@+id/img_poster"
-            android:layout_width="180dp"
+            android:layout_width="185dp"
             android:layout_height="220dp"
             android:background="@color/downy"
             android:scaleType="fitXY"
@@ -37,7 +37,7 @@
             android:text="@string/letter"
             android:textColor="@color/black_teal"
             android:gravity="center"
-            android:textSize="@dimen/_15sdp"
+            android:textSize="@dimen/_16ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/img_poster" />

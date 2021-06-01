@@ -25,8 +25,7 @@ class NumberActivity : AppCompatActivity(), NumberAdapter.NumberAdapterListener 
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
-        adapter.stateRestorationPolicy =
-            RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+
     }
 
     override fun onStart() {

@@ -4,7 +4,7 @@
     <string name="number_english">ONE</string>
     <string name="home">Home</string>
     <string name="Camera">Camera</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="num">1</string>
     <string name="open">OPEN</string>
@@ -19,4 +19,6 @@
     <string name="img_background">Image Background</string>
     <string name="img_iconAngka">icon angka</string>
     <string name="baseUrl">https://storage.googleapis.com/signlanguage-bucket2/%s</string>
+    <string name="alphabet">Alphabet</string>
+    <string name="numerik">Numerik</string>
 </resources>
