@@ -8,12 +8,10 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.khairul.bisindosignlanguangerecognition.ui.dictionary.DictionaryFragment
-import com.khairul.bisindosignlanguangerecognition.ui.number.NumberFragment
+import com.khairul.bisindosignlanguangerecognition.ui.dictionary.DictionaryActivity
+import com.khairul.bisindosignlanguangerecognition.ui.number.NumberActivity
 
 class MainActivity : AppCompatActivity() {
-
-
     private val onNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -25,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main1)
+        setContentView(R.layout.activity_main)
         val navigationView: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
         navigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
@@ -38,14 +36,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnDictionary.setOnClickListener {
-            loadFragment(DictionaryFragment())
+            val intent = Intent(this, DictionaryActivity::class.java)
+            startActivity(intent)
         }
 
         btnNumber.setOnClickListener {
-            val fragment: Fragment = NumberFragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.rv_number, fragment)
-                .commit()
+            val intent = Intent(this, NumberActivity::class.java)
+            startActivity(intent)
         }
     }
 

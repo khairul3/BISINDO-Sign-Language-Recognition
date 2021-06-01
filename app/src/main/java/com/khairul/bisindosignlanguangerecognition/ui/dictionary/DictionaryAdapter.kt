@@ -1,4 +1,4 @@
-package com.khairul.bisindosignlanguangerecognition.ui.number
+package com.khairul.bisindosignlanguangerecognition.ui.dictionary
 
 import android.view.LayoutInflater
 import android.view.View
@@ -14,20 +14,20 @@ import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.firestore.FirestoreAdapter
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
 
-class NumberAdapter(
+class DictionaryAdapter(
     query: Query,
-    private val listener: NumberAdapterListener
-) : FirestoreAdapter<NumberAdapter.SportsViewHolder>(query) {
+    private val listener: DictionaryAdapterListener
+) : FirestoreAdapter<DictionaryAdapter.SportsViewHolder>(query) {
 
     class SportsViewHolder(
         itemView: View
     ) : RecyclerView.ViewHolder(itemView) {
 
-        private val cardView: MaterialCardView = itemView.findViewById(R.id.item_number)
+        private val cardView: MaterialCardView = itemView.findViewById(R.id.item_letter)
         private val label: TextView = itemView.findViewById(R.id.txt_title)
         private val image: ImageView = itemView.findViewById(R.id.img_sketsa)
 
-        fun bind(snapshot: DocumentSnapshot, listener: NumberAdapterListener) {
+        fun bind(snapshot: DocumentSnapshot, listener: DictionaryAdapterListener) {
             val sports: Entity? = snapshot.toObject(Entity::class.java)
             label.text = sports?.label
             Glide.with(image)
@@ -40,14 +40,14 @@ class NumberAdapter(
         }
     }
 
-    interface NumberAdapterListener {
+    interface DictionaryAdapterListener {
         fun onSportSelected(sports: Entity?)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SportsViewHolder {
         return SportsViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.item_rows_number, parent, false
+                R.layout.item_rows_dictionary, parent, false
             )
         )
     }

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/containerID"
     android:layout_height="match_parent"
     android:background="@color/lightpurple"
     tools:context=".MainActivity">
@@ -13,19 +14,10 @@
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         tools:ignore="MissingConstraints">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_100sdp"
-            android:background="@drawable/toolbar"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:titleTextColor="@android:color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
-        android:id="@+id/containerID"
+        android:id="@+id/frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_70sdp"
@@ -163,10 +155,10 @@
                         style="@style/PrimaryButtonStyle2"
                         android:layout_marginStart="@dimen/_12ssp"
                         android:layout_marginEnd="@dimen/_12ssp"
-                        android:textSize="@dimen/_12ssp"
                         android:background="@drawable/background_btn1"
                         android:enabled="true"
                         android:text="@string/open"
+                        android:textSize="@dimen/_12ssp"
                         app:backgroundTint="@null" />
                 </LinearLayout>
 
@@ -244,11 +236,11 @@
                         style="@style/PrimaryButtonStyle"
                         android:layout_marginStart="@dimen/_12ssp"
                         android:layout_marginEnd="@dimen/_12ssp"
-                        android:enabled="true"
-                        android:textSize="@dimen/_12ssp"
-
                         android:background="@drawable/background_btn2"
+                        android:enabled="true"
+
                         android:text="@string/open"
+                        android:textSize="@dimen/_12ssp"
                         app:backgroundTint="@null" />
 
 
@@ -271,10 +263,9 @@
         app:itemRippleColor="@color/green"
         app:itemTextColor="@color/selector_bottom_navigation"
         app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
-        app:layout_constraintBottom_toBottomOf="@+id/containerID"
+        app:layout_constraintBottom_toBottomOf="@+id/frame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"
         tools:ignore="MissingConstraints" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
