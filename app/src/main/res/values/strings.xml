@@ -2,4 +2,24 @@
     <string name="app_name">BISINDO</string>
     <string name="number">NUMBER</string>
     <string name="number_english">ONE</string>
+    <string name="home">Home</string>
+    <string name="Camera">Camera</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="num">1</string>
+    <string name="open">OPEN</string>
+    <string name="dictionary">Kamus</string>
+    <string name="numbers">Angka</string>
+    <string name="other">Fitur Lain</string>
+    <string name="desc_detail">Description</string>
+    <string name="title">Title</string>
+    <string name="imageDetail">Image Detail</string>
+    <string name="letter">Letter</string>
+    <string name="img_result">Result Image</string>
+    <string name="img_background">Image Background</string>
+    <string name="img_iconAngka">icon angka</string>
+    <string name="baseUrl">https://storage.googleapis.com/signlanguage-bucket2/%s</string>
+    <string name="alphabet">Alphabet</string>
+    <string name="numerik">Numerik</string>
+    <string name="akses_camera">Akses camera</string>
 </resources>
