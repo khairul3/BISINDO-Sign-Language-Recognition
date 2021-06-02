@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.khairul.bisindosignlanguangerecognition.ui.dictionary.DictionaryActivity
 import com.khairul.bisindosignlanguangerecognition.ui.number.NumberActivity
+import com.khairul.bisindosignlanguangerecognition.camera_test_activity
 
 class MainActivity : AppCompatActivity() {
     private val onNavigationItemSelectedListener =
@@ -47,9 +48,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadCam() {
-        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivity(intent)
+        //val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        val intent2 = Intent(this, camera_test_activity::class.java)
+        startActivity(intent2)
     }
+
 
     private fun loadFragment(fragment: Fragment?): Boolean {
         if (fragment != null) {

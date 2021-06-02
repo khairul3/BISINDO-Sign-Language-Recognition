@@ -22,4 +22,5 @@
     <string name="alphabet">Alphabet</string>
     <string name="numerik">Numerik</string>
     <string name="akses_camera">Akses camera</string>
+    <string name="no_camera_access">Please grant camera permissions.</string>
 </resources>
