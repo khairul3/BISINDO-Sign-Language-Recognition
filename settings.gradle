@@ -1,4 +1,2 @@
-include ':core'
 rootProject.name = "Bisindo Sign Languange Recognition"
 include ':app'
-include ':utils'

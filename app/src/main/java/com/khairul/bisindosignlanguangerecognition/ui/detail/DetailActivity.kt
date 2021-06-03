@@ -9,11 +9,6 @@ import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
 
 class DetailActivity : AppCompatActivity() {
-    companion object {
-        const val EXTRA_NUMBER = "extra_number"
-        const val EXTRA_LETTER = "extra_letter"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
@@ -28,6 +23,7 @@ class DetailActivity : AppCompatActivity() {
             .load(entity?.gambar.toString())
             .into(image)
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

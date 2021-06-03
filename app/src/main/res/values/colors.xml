@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="downy">#76CDC2</color>
-    <color name="sweet_pink">#F79CA1</color>
+    <color name="sweet_pink">#f380ab</color>
     <color name="nelson">#B2E3FF</color>
     <color name="nelson_700">#4abdff</color>
     <color name="windowsBackgroud">#e3e3e3</color>

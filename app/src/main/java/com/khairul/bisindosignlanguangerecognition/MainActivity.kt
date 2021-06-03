@@ -3,13 +3,14 @@ package com.khairul.bisindosignlanguangerecognition
 import android.content.Intent
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.Menu
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.khairul.bisindosignlanguangerecognition.ui.dictionary.DictionaryActivity
 import com.khairul.bisindosignlanguangerecognition.ui.number.NumberActivity
+
 
 class MainActivity : AppCompatActivity() {
     private val onNavigationItemSelectedListener =
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.nav_home -> MainActivity()
                 R.id.nav_camera -> loadCam()
+                R.id.nav_lesson -> comingSoon()
             }
             true
         }
@@ -30,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         val imgCam = findViewById<ImageView>(R.id.img_cam)
         val btnDictionary = findViewById<Button>(R.id.btn_dictionary)
         val btnNumber = findViewById<Button>(R.id.btn_number)
+        val btnSapaan = findViewById<Button>(R.id.btn_sapaan)
+        val btnkerja = findViewById<Button>(R.id.btn_kerja)
+
 
         imgCam.setOnClickListener {
             loadCam()
@@ -44,6 +49,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NumberActivity::class.java)
             startActivity(intent)
         }
+
+        btnSapaan.setOnClickListener {
+            comingSoon()
+        }
+        btnkerja.setOnClickListener {
+            comingSoon()
+        }
+
     }
 
     private fun loadCam() {
@@ -51,13 +64,15 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun loadFragment(fragment: Fragment?): Boolean {
-        if (fragment != null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.containerID, fragment)
-                .commit()
-            return true
-        }
-        return false
+    private fun comingSoon() {
+        val intent = Intent(this, ComingSoonActivity::class.java)
+        startActivity(intent)
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_top, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+
 }
