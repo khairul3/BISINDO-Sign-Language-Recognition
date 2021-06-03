@@ -10,7 +10,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
-import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailActivity
+import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailDictionaryActivity
+import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailNumberActivity
 
 class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdapterListener {
 
@@ -43,7 +44,7 @@ class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdap
     }
 
     override fun onSportSelected(entity: Entity?) {
-        val intent = Intent(applicationContext, DetailActivity::class.java)
+        val intent = Intent(applicationContext, DetailDictionaryActivity::class.java)
         intent.putExtra("SPORTS_DETAIL_DATA", entity)
         startActivity(intent)
     }
