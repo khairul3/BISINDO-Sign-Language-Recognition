@@ -287,7 +287,7 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
-                                    app:srcCompat="@drawable/conversation" />
+                                    app:srcCompat="@drawable/kata_sifat" />
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -318,7 +318,7 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <Button
-                            android:id="@+id/btn_sapaan"
+                            android:id="@+id/btn_sifat"
                             style="@style/PrimaryButtonStyle2"
                             android:layout_marginStart="@dimen/_12ssp"
                             android:layout_marginEnd="@dimen/_12ssp"
@@ -398,7 +398,7 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <Button
-                            android:id="@+id/btn_kerja"
+                            android:id="@+id/btn_sapaan"
                             style="@style/PrimaryButtonStyle"
                             android:layout_marginStart="@dimen/_12ssp"
                             android:layout_marginEnd="@dimen/_12ssp"

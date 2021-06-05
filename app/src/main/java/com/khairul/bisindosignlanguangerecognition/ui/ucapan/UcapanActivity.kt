@@ -1,8 +1,8 @@
-package com.khairul.bisindosignlanguangerecognition.ui.number
+package com.khairul.bisindosignlanguangerecognition.ui.ucapan
 
 import android.content.Intent
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -10,23 +10,24 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
-import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailNumberActivity
+import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailSifatActivity
+import com.khairul.bisindosignlanguangerecognition.ui.katasifat.SifatAdapter
 
-class NumberActivity : AppCompatActivity(), NumberAdapter.NumberAdapterListener {
+class UcapanActivity : AppCompatActivity(), SifatAdapter.SifatAdapterListener {
 
-    private lateinit var adapter: NumberAdapter
+    private lateinit var adapter: SifatAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_number)
+        setContentView(R.layout.activity_ucapan)
 
         val actionbar = supportActionBar
-        actionbar?.title = "ANGKA"
+        actionbar?.title = "KATA SAPA"
         actionbar?.setDisplayHomeAsUpEnabled(true)
 
-        val query: Query = FirebaseFirestore.getInstance().collection("angka")
+        val query: Query = FirebaseFirestore.getInstance().collection("Ucapan")
+        val recyclerView: RecyclerView = findViewById(R.id.rv_ucapan)
 
-        val recyclerView: RecyclerView = findViewById(R.id.rv_number)
-        adapter = NumberAdapter(query, this)
+        adapter = SifatAdapter(query, this)
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
@@ -43,9 +44,9 @@ class NumberActivity : AppCompatActivity(), NumberAdapter.NumberAdapterListener 
         adapter.startListening()
     }
 
-    override fun onSportSelected(sports: Entity?) {
-        val intent = Intent(applicationContext, DetailNumberActivity::class.java)
-        intent.putExtra("DETAIL_DATA", sports)
+    override fun onSportSelected(sifat: Entity?) {
+        val intent = Intent(applicationContext, DetailSifatActivity::class.java)
+        intent.putExtra("DETAIL_DATA", sifat)
         startActivity(intent)
     }
 

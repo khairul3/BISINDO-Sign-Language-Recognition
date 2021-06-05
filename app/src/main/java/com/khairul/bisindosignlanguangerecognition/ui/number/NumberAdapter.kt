@@ -13,31 +13,32 @@ import com.google.firebase.firestore.Query
 import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.firestore.FirestoreAdapter
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
+import com.khairul.bisindosignlanguangerecognition.databinding.ItemRowsBinding
+import com.khairul.bisindosignlanguangerecognition.ui.katasifat.SifatAdapter
 
 class NumberAdapter(
     query: Query,
     private val listener: NumberAdapterListener
-) : FirestoreAdapter<NumberAdapter.SportsViewHolder>(query) {
+) : FirestoreAdapter<NumberAdapter.NumberViewHolder>(query) {
 
-    class SportsViewHolder(
-        itemView: View
-    ) : RecyclerView.ViewHolder(itemView) {
-
-        private val cardView: MaterialCardView = itemView.findViewById(R.id.item_number)
-        private val label: TextView = itemView.findViewById(R.id.txt_title)
-        private val image: ImageView = itemView.findViewById(R.id.img_sketsa)
+    class NumberViewHolder(
+        private val binding: ItemRowsBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(snapshot: DocumentSnapshot, listener: NumberAdapterListener) {
-            val sports: Entity? = snapshot.toObject(Entity::class.java)
 
-            val angka = "Angka ${sports?.label}"
-            label.text = angka
-            Glide.with(image)
-                .load(sports?.gambar.toString())
-                .into(image)
+            with(binding) {
+                val number: Entity? = snapshot.toObject(Entity::class.java)
+                val letter = "Angka ${number?.label}"
 
-            cardView.setOnClickListener {
-                listener.onSportSelected(sports)
+                txtTitle.text = letter
+                Glide.with(itemView.context)
+                    .load(number?.gambar.toString())
+                    .into(imgSketsa)
+
+                item.setOnClickListener {
+                    listener.onSportSelected(number)
+                }
             }
         }
     }
@@ -46,15 +47,13 @@ class NumberAdapter(
         fun onSportSelected(sports: Entity?)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SportsViewHolder {
-        return SportsViewHolder(
-            LayoutInflater.from(parent.context).inflate(
-                R.layout.item_rows_number, parent, false
-            )
-        )
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
+        val itemRowsBinding =
+            ItemRowsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return NumberViewHolder(itemRowsBinding)
     }
 
-    override fun onBindViewHolder(holder: SportsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
         getSnapshot(position)?.let { snapshot ->
             holder.bind(snapshot, listener)
         }

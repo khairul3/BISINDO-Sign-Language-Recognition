@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightpurple"
-    android:theme="@style/Theme.BisindoSignLanguangeRecognition"
-    tools:context=".ui.detail.DetailDictionaryActivity">
+    android:theme="@style/Theme.BisindoSignLanguangeRecognition">
 
     <ImageView
         android:id="@+id/img_backdrop"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_252sdp"
+        android:layout_height="@dimen/_240sdp"
         android:contentDescription="@string/imageDetail"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/cardView"

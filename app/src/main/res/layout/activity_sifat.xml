@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.number.NumberActivity">
+    tools:context=".ui.katasifat.SifatActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
@@ -20,13 +20,13 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:scaleType="fitXY"
-            android:src="@drawable/backdrop_angka"
+            android:src="@drawable/backdrop_sifat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_number"
+            android:id="@+id/rv_sifat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"

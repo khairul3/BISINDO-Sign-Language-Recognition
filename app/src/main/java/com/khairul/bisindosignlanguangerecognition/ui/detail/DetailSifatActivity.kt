@@ -1,12 +1,15 @@
 package com.khairul.bisindosignlanguangerecognition.ui.detail
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
 import com.khairul.bisindosignlanguangerecognition.databinding.ActivityDetailBinding
 
-class DetailDictionaryActivity : AppCompatActivity() {
+class DetailSifatActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
 
@@ -17,18 +20,21 @@ class DetailDictionaryActivity : AppCompatActivity() {
 
         val entity: Entity? = intent.getParcelableExtra("DETAIL_DATA")
         val actionbar = supportActionBar
-        val dic = "HURUF ${entity?.label} "
-        actionbar?.title = dic
+        val sif = entity?.label
+        actionbar?.title = sif
         actionbar?.setDisplayHomeAsUpEnabled(true)
 
         with(binding) {
-            tvTitle.text = dic
+            tvTitle.text = sif
             tvDesc.text = entity?.keterangan
-            Glide.with(this@DetailDictionaryActivity)
+            Glide.with(this@DetailSifatActivity)
                 .load(entity?.gambar.toString())
                 .into(imgBackdrop)
+
         }
     }
+
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

@@ -13,48 +13,47 @@ import com.google.firebase.firestore.Query
 import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.firestore.FirestoreAdapter
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
+import com.khairul.bisindosignlanguangerecognition.databinding.ItemRowsBinding
+import com.khairul.bisindosignlanguangerecognition.ui.katasifat.SifatAdapter
 
 class DictionaryAdapter(
     query: Query,
     private val listener: DictionaryAdapterListener
-) : FirestoreAdapter<DictionaryAdapter.SportsViewHolder>(query) {
+) : FirestoreAdapter<DictionaryAdapter.DictionaryViewHolder>(query) {
 
-    class SportsViewHolder(
-        itemView: View
-    ) : RecyclerView.ViewHolder(itemView) {
-
-        private val cardView: MaterialCardView = itemView.findViewById(R.id.item_letter)
-        private val label: TextView = itemView.findViewById(R.id.txt_title)
-        private val image: ImageView = itemView.findViewById(R.id.img_sketsa)
+    class DictionaryViewHolder(
+        private val binding: ItemRowsBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(snapshot: DocumentSnapshot, listener: DictionaryAdapterListener) {
-            val sports: Entity? = snapshot.toObject(Entity::class.java)
-            val letter = "Huruf ${sports?.label}"
 
-            label.text = letter
-            Glide.with(image)
-                .load(sports?.gambar.toString())
-                .into(image)
+            with(binding) {
+                val dictionary: Entity? = snapshot.toObject(Entity::class.java)
+                val letter = "Huruf ${dictionary?.label}"
 
-            cardView.setOnClickListener {
-                listener.onSportSelected(sports)
+                txtTitle.text = letter
+                Glide.with(itemView.context)
+                    .load(dictionary?.gambar.toString())
+                    .into(imgSketsa)
+
+                item.setOnClickListener {
+                    listener.onSportSelected(dictionary)
+                }
             }
         }
     }
 
     interface DictionaryAdapterListener {
-        fun onSportSelected(sports: Entity?)
+        fun onSportSelected(dictionary: Entity?)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SportsViewHolder {
-        return SportsViewHolder(
-            LayoutInflater.from(parent.context).inflate(
-                R.layout.item_rows_dictionary, parent, false
-            )
-        )
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DictionaryViewHolder {
+        val itemRowsBinding =
+            ItemRowsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return DictionaryViewHolder(itemRowsBinding)
     }
 
-    override fun onBindViewHolder(holder: SportsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: DictionaryViewHolder, position: Int) {
         getSnapshot(position)?.let { snapshot ->
             holder.bind(snapshot, listener)
         }

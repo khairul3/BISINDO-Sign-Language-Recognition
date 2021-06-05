@@ -10,8 +10,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
-import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailDictionaryActivity
-import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailNumberActivity
+import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailSifatActivity
 
 class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdapterListener {
 
@@ -19,18 +18,19 @@ class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdap
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dictionary)
+
         val actionbar = supportActionBar
-        actionbar!!.title = "ALFABET"
-        actionbar.setDisplayHomeAsUpEnabled(true)
+        actionbar?.title = "ALFABET"
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+
         val query: Query = FirebaseFirestore.getInstance().collection("alfabet")
         val recyclerView: RecyclerView = findViewById(R.id.rv_dic)
+
         adapter = DictionaryAdapter(query, this)
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
-//        adapter.stateRestorationPolicy =
-//            RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
     }
 
     override fun onStart() {
@@ -44,8 +44,8 @@ class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdap
     }
 
     override fun onSportSelected(entity: Entity?) {
-        val intent = Intent(applicationContext, DetailDictionaryActivity::class.java)
-        intent.putExtra("SPORTS_DETAIL_DATA", entity)
+        val intent = Intent(applicationContext, DetailSifatActivity::class.java)
+        intent.putExtra("DETAIL_DATA", entity)
         startActivity(intent)
     }
 

@@ -9,7 +9,9 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.khairul.bisindosignlanguangerecognition.ui.dictionary.DictionaryActivity
+import com.khairul.bisindosignlanguangerecognition.ui.katasifat.SifatActivity
 import com.khairul.bisindosignlanguangerecognition.ui.number.NumberActivity
+import com.khairul.bisindosignlanguangerecognition.ui.ucapan.UcapanActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         val btnDictionary = findViewById<Button>(R.id.btn_dictionary)
         val btnNumber = findViewById<Button>(R.id.btn_number)
         val btnSapaan = findViewById<Button>(R.id.btn_sapaan)
-        val btnkerja = findViewById<Button>(R.id.btn_kerja)
+        val btnkerja = findViewById<Button>(R.id.btn_sifat)
 
 
         imgCam.setOnClickListener {
@@ -51,12 +53,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnSapaan.setOnClickListener {
-            comingSoon()
+            val intent = Intent(this, UcapanActivity::class.java)
+            startActivity(intent)
         }
         btnkerja.setOnClickListener {
-            comingSoon()
+            val intent = Intent(this, SifatActivity::class.java)
+            startActivity(intent)
         }
-
     }
 
     private fun loadCam() {

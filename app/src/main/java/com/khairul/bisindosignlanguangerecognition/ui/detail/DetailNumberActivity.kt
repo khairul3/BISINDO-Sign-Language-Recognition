@@ -7,25 +7,30 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
+import com.khairul.bisindosignlanguangerecognition.databinding.ActivityDetailBinding
 
 class DetailNumberActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityDetailBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_number)
+        binding = ActivityDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val entity: Entity? = intent.getParcelableExtra("SPORTS_DETAIL_DATA")
-        val image: ImageView = findViewById(R.id.img_backdrop)
+        val entity: Entity? = intent.getParcelableExtra("DETAIL_DATA")
         val actionbar = supportActionBar
         val num = "ANGKA ${entity?.label} "
+        actionbar?.title = num
+        actionbar?.setDisplayHomeAsUpEnabled(true)
 
-        actionbar!!.title = num
-        actionbar.setDisplayHomeAsUpEnabled(true)
-
-        findViewById<TextView>(R.id.tv_title).text = num
-        findViewById<TextView>(R.id.tv_desc).text = entity?.keterangan
-        Glide.with(this)
-            .load(entity?.gambar.toString())
-            .into(image)
+        with(binding) {
+            tvTitle.text = num
+            tvDesc.text = entity?.keterangan
+            Glide.with(this@DetailNumberActivity)
+                .load(entity?.gambar.toString())
+                .into(imgBackdrop)
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
