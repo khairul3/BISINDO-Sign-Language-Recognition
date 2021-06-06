@@ -10,14 +10,12 @@
     <ImageView
         android:id="@+id/img_backdrop"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_240sdp"
+        android:layout_height="@dimen/_220sdp"
         android:contentDescription="@string/imageDetail"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/data_huruf_a" />
 
     <androidx.cardview.widget.CardView
@@ -25,7 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="340dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/bg_menu"
         app:cardBackgroundColor="@color/windowsBackgroud"
@@ -33,7 +30,7 @@
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/img_backdrop">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
