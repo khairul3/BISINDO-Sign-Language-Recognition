@@ -27,6 +27,7 @@ class NumberActivity : AppCompatActivity(), NumberAdapter.NumberAdapterListener 
 
         val recyclerView: RecyclerView = findViewById(R.id.rv_number)
         adapter = NumberAdapter(query, this)
+
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter

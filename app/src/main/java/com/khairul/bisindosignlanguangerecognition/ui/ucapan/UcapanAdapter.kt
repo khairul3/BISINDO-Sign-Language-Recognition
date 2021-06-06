@@ -1,4 +1,4 @@
-package com.khairul.bisindosignlanguangerecognition.ui.katasifat
+package com.khairul.bisindosignlanguangerecognition.ui.ucapan
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,18 +8,18 @@ import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.Query
 import com.khairul.bisindosignlanguangerecognition.data.firestore.FirestoreAdapter
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
-import com.khairul.bisindosignlanguangerecognition.databinding.ItemRowSifatBinding
+import com.khairul.bisindosignlanguangerecognition.databinding.ItemRowSapaanBinding
 
-class SifatAdapter(
+class UcapanAdapter(
     query: Query,
-    private val listener: SifatAdapterListener
-) : FirestoreAdapter<SifatAdapter.SifatViewHolder>(query) {
+    private val listener: UcapanAdapterListener
+) : FirestoreAdapter<UcapanAdapter.SifatViewHolder>(query) {
 
     class SifatViewHolder(
-        private val binding: ItemRowSifatBinding
+        private val binding: ItemRowSapaanBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(snapshot: DocumentSnapshot, listener: SifatAdapterListener) {
+        fun bind(snapshot: DocumentSnapshot, listener: UcapanAdapterListener) {
 
             with(binding) {
                 val sifat: Entity? = snapshot.toObject(Entity::class.java)
@@ -37,14 +37,14 @@ class SifatAdapter(
         }
     }
 
-    interface SifatAdapterListener {
+    interface UcapanAdapterListener {
         fun onSportSelected(sifat: Entity?)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SifatViewHolder {
-        val itemRowSifatBinding =
-            ItemRowSifatBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return SifatViewHolder(itemRowSifatBinding)
+        val itemRowSapaanBinding =
+            ItemRowSapaanBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return SifatViewHolder(itemRowSapaanBinding)
     }
 
     override fun onBindViewHolder(holder: SifatViewHolder, position: Int) {

@@ -1,20 +1,14 @@
 package com.khairul.bisindosignlanguangerecognition.ui.number
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.google.android.material.card.MaterialCardView
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.Query
-import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.firestore.FirestoreAdapter
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
-import com.khairul.bisindosignlanguangerecognition.databinding.ItemRowsBinding
-import com.khairul.bisindosignlanguangerecognition.ui.katasifat.SifatAdapter
+import com.khairul.bisindosignlanguangerecognition.databinding.ItemRowNumberBinding
 
 class NumberAdapter(
     query: Query,
@@ -22,7 +16,7 @@ class NumberAdapter(
 ) : FirestoreAdapter<NumberAdapter.NumberViewHolder>(query) {
 
     class NumberViewHolder(
-        private val binding: ItemRowsBinding
+        private val binding: ItemRowNumberBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(snapshot: DocumentSnapshot, listener: NumberAdapterListener) {
@@ -49,7 +43,7 @@ class NumberAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
         val itemRowsBinding =
-            ItemRowsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemRowNumberBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return NumberViewHolder(itemRowsBinding)
     }
 

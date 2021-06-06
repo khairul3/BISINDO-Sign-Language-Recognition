@@ -13,9 +13,9 @@ import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
 import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailSifatActivity
 import com.khairul.bisindosignlanguangerecognition.ui.katasifat.SifatAdapter
 
-class UcapanActivity : AppCompatActivity(), SifatAdapter.SifatAdapterListener {
+class UcapanActivity : AppCompatActivity(), UcapanAdapter.UcapanAdapterListener {
 
-    private lateinit var adapter: SifatAdapter
+    private lateinit var adapter: UcapanAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ucapan)
@@ -27,7 +27,7 @@ class UcapanActivity : AppCompatActivity(), SifatAdapter.SifatAdapterListener {
         val query: Query = FirebaseFirestore.getInstance().collection("Ucapan")
         val recyclerView: RecyclerView = findViewById(R.id.rv_ucapan)
 
-        adapter = SifatAdapter(query, this)
+        adapter = UcapanAdapter(query, this)
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
