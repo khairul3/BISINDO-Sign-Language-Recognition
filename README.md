@@ -71,7 +71,7 @@ a new bucket. After the bucket is created, upload the model into the bucket you 
 • Create Cloud Function and use python 3, then select the http trigger
 
 • Enter the python script to handle requests and to download models from Cloud Storage.
-for code is in "main.py" and "requirements.txt".
+for code is in "Cloud/main.py" and "Cloud/requirements.txt".
 
 • Perform model tests in the cloud function
 
