@@ -28,5 +28,6 @@
     <string name="sapaan">Sapaan</string>
     <string name="comingSoon">Coming soon .....</string>
     <string name="lesson">Lesson</string>
+    <string name="search_hint">Search</string>
 
 </resources>
