@@ -59,7 +59,7 @@ Machine Learning models from Tensorflow are added to buckets that have been
 created in Cloud Storage. Then run the python script that has been created by 
 the Machine Learning team in the cloud function to handle requests and download models 
 from Cloud Storage. Next, test the model in Cloud Function and return the prediction 
-results to the user in the form of a response. and finally make a request in the Cloud 
+results to the user in the form of a response. and lastly make a request in the Cloud 
 Function using the URL from the triggers tab.
 
 # Step 1: Create Bucket and Upload Model from Tensorflow
@@ -70,8 +70,8 @@ a new bucket. After the bucket is created, upload the model into the bucket you 
 # Step 2: Create Cloud Function for Deploy Machine Learning Model
 • Create Cloud Function and use python 3, then select the http trigger
 
-• Enter the python script "main.py" to handle requests and to download models from Cloud Storage.
-for code is in "main.py(link)" and "requirements.txt(link)".
+• Enter the python script to handle requests and to download models from Cloud Storage.
+for code is in "main.py" and "requirements.txt".
 
 • Perform model tests in the cloud function
 
