@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "640846465790",
+    "project_id": "valid-dragon-312515",
+    "storage_bucket": "valid-dragon-312515.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640846465790:android:0346292eb86d4f419733af",
+        "android_client_info": {
+          "package_name": "com.khairul.bisindosignlanguangerecognition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640846465790-215u6rbuebkb70cumnac37dlg25192j3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtyRP34TV1K_xlBc2HH2nV3blaIAKwQPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640846465790-215u6rbuebkb70cumnac37dlg25192j3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

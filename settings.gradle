@@ -1,0 +1,2 @@
+rootProject.name = "Bisindo Sign Languange Recognition"
+include ':app'

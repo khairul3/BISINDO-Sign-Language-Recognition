@@ -1,6 +1,5 @@
 package com.khairul.bisindosignlanguangerecognition.ui.camera
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.webkit.WebChromeClient
 import android.webkit.WebView
@@ -11,7 +10,6 @@ import com.khairul.bisindosignlanguangerecognition.R
 
 
 class CameraActivity : AppCompatActivity() {
-    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)
@@ -20,7 +18,7 @@ class CameraActivity : AppCompatActivity() {
         webView.settings.javaScriptEnabled = true
 
         webView.webViewClient = object : WebViewClient() {
-            override fun onPageFinished(view: WebView, url: String ) {
+            override fun onPageFinished(view: WebView, url: String) {
                 view.loadUrl("javascript:alert('Web Dicoding berhasil dimuat')")
             }
         }

@@ -12,13 +12,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logofix"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logofix"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BisindoSignLanguangeRecognition">
-        <activity android:name=".ui.ucapan.UcapanActivity" />
-        <activity android:name=".ui.detail.DetailSifatActivity" />
+        <activity android:name=".ui.ucapan.UcapanActivity"></activity>
+        <activity android:name=".ui.detail.DetailSifatActivity"></activity>
         <activity android:name=".ui.katasifat.SifatActivity" />
         <activity android:name=".ComingSoonActivity" />
         <activity android:name=".ui.camera.CameraActivity" />
