@@ -40,7 +40,7 @@ B. Extracting Features
 We extracted 21 hand landmarks features from images using [MediaPipe API](https://google.github.io/mediapipe/solutions/hands.html) in python notebook and performing EDA. We realized that extracting features using mediapipe from kaggle datasets is inducting many losses in the 128 datapoints. So we decided to make our own dataset using simple python script [app.py](ML/app.py) that uses opencv to extract 21 features in csv with 130 column. We generated [File CSV](https://drive.google.com/drive/folders/1G07Ni9bIfZDhmZNxN8wx6RIvtEKsr6OD) with 1061 datapoints in total from alphabetic (A-Z, 26) and numerical (0-10, 11) characters.  
 
 C. Training The Model  
-We then realized that some sign languages from alphabetic and numerical in BISINDO are the same (such as 0 and O, 2 and V)so we decided to classify all of them by building three different [models](ML/final_model):  
+We then realized that some sign languages from alphabetic and numerical in BISINDO are the same (such as 0 and O, 2 and V) so we decided to classify all of them by building three different [models](ML/final_model):  
 Class11(numerical only)    
 Class26(alphabetical only)    
 Class37(Both)   
