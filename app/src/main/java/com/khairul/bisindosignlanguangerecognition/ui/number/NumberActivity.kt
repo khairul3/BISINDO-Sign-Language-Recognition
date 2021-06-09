@@ -10,7 +10,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
-import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailActivity
+import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailNumberActivity
 
 class NumberActivity : AppCompatActivity(), NumberAdapter.NumberAdapterListener {
 
@@ -18,12 +18,16 @@ class NumberActivity : AppCompatActivity(), NumberAdapter.NumberAdapterListener 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_number)
+
         val actionbar = supportActionBar
-        actionbar!!.title = "ANGKA"
-        actionbar.setDisplayHomeAsUpEnabled(true)
+        actionbar?.title = "ANGKA"
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+
         val query: Query = FirebaseFirestore.getInstance().collection("angka")
+
         val recyclerView: RecyclerView = findViewById(R.id.rv_number)
         adapter = NumberAdapter(query, this)
+
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
@@ -41,8 +45,8 @@ class NumberActivity : AppCompatActivity(), NumberAdapter.NumberAdapterListener 
     }
 
     override fun onSportSelected(sports: Entity?) {
-        val intent = Intent(applicationContext, DetailActivity::class.java)
-        intent.putExtra("SPORTS_DETAIL_DATA", sports)
+        val intent = Intent(applicationContext, DetailNumberActivity::class.java)
+        intent.putExtra("DETAIL_DATA", sports)
         startActivity(intent)
     }
 

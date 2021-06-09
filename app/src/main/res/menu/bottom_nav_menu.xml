@@ -8,4 +8,9 @@
         android:id="@+id/nav_camera"
         android:icon="@drawable/camera"
         android:title="@string/Camera" />
+    <item
+        android:id="@+id/nav_lesson"
+        android:icon="@drawable/lesson"
+        android:title="@string/lesson" />
+
 </menu>

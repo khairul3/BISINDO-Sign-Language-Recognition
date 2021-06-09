@@ -5,19 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightpurple"
-    tools:context=".ui.detail.DetailActivity">
+    android:theme="@style/Theme.BisindoSignLanguangeRecognition">
 
     <ImageView
         android:id="@+id/img_backdrop"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_252sdp"
+        android:layout_height="@dimen/_220sdp"
         android:contentDescription="@string/imageDetail"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/data_huruf_a" />
 
     <androidx.cardview.widget.CardView
@@ -25,7 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="340dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/bg_menu"
         app:cardBackgroundColor="@color/windowsBackgroud"
@@ -33,22 +30,24 @@
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/img_backdrop">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="192dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/border_corner">
 
             <TextView
                 android:id="@+id/tv_title"
-                style="@style/Text.Title"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/title"
+                android:textColor="@color/nelson_700"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -60,24 +59,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="16dp"
-                android:background="@color/black_teal"
+                android:background="@color/grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
             <TextView
                 android:id="@+id/tv_desc"
-                style="@style/Text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/desc_detail"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="@dimen/_14ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/devider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+                tools:layout_editor_absoluteX="4dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

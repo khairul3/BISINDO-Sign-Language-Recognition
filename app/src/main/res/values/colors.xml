@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="downy">#76CDC2</color>
-    <color name="sweet_pink">#F79CA1</color>
+    <color name="sweet_pink">#f380ab</color>
     <color name="nelson">#B2E3FF</color>
     <color name="nelson_700">#4abdff</color>
     <color name="windowsBackgroud">#e3e3e3</color>
@@ -13,8 +13,10 @@
     <color name="colorPrimaryLight">#1e2746</color>
     <color name="colorTextPrimary">#cbd5ed</color>
     <color name="colorTextSecondary">#4a5b82</color>
-    <color name="colorTextOther">#5ad303</color>
-    <color name="colorThemeExtra">#ff5252</color>
+    <color name="greenButton">#83c73a</color>
+    <color name="blueButton">#1587fe</color>
+    <color name="purpleButton">#ad3ac7</color>
+
 
     <color name="black">#000000</color>
     <color name="black1">#1C1C1C</color>

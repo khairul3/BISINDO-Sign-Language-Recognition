@@ -2,12 +2,13 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/item_number"
+    android:id="@+id/item"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="6dp"
+    android:background="@color/lightpurple"
     android:elevation="8dp"
-    app:cardCornerRadius="15dp">
+    app:cardCornerRadius="14dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="185dp"
@@ -19,6 +20,7 @@
             android:layout_height="220dp"
             android:background="@color/lightBlue"
             android:scaleType="fitXY"
+            android:contentDescription="@string/img_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -29,23 +31,26 @@
         <TextView
             android:id="@+id/txt_title"
             android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:background="@color/sweet_pink"
+            android:layout_height="wrap_content"
+            android:background="@color/purpleButton"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:text="@string/letter"
+            android:textColor="@color/white"
             android:gravity="center"
-            android:padding="4dp"
-            android:text="@string/number"
-            android:textColor="@color/black_teal"
             android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/img_poster" />
-
 
         <ImageView
             android:id="@+id/img_sketsa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/number"
+            android:contentDescription="@string/img_result"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/img_poster"
             app:layout_constraintStart_toStartOf="@+id/img_poster"
