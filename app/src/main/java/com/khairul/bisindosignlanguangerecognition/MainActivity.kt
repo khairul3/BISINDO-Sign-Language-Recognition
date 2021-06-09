@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> MainActivity()
-                R.id.nav_camera -> loadCam()
+                R.id.nav_camera -> comingSoon()
                 R.id.nav_lesson -> comingSoon()
             }
             true
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
 
         imgCam.setOnClickListener {
-            loadCam()
+           comingSoon()
         }
 
         btnDictionary.setOnClickListener {
