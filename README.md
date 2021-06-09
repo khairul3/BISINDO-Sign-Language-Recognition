@@ -37,14 +37,14 @@ A. Getting the dataset in kaggle
 In this project we use ISLBISINDO1 as our main dataset, that dataset contains a 27 classes of alphabet sign language. There's two directories in that dataset, traindir and testdir. Traindir contains 64 images per classes and testdir contains 16 images per classes.  
 
 B. Extracting Features  
-We extract 21 hand landmarks features from images using [MediaPipe API](https://google.github.io/mediapipe/solutions/hands.html) in python notebook and performing EDA. We realized that extracting features using mediapipe from kaggle datasets involving many losses. So we decided to make our own dataset using simple python script app.py that uses opencv to extract 21 features in csv with 130 column. We generated [File CSV](https://drive.google.com/drive/folders/1G07Ni9bIfZDhmZNxN8wx6RIvtEKsr6OD) with 1061 datapoints in total from alphabetic (A-Z, 26) and numerical (0-10, 11) characters.  
+We extracted 21 hand landmarks features from images using [MediaPipe API](https://google.github.io/mediapipe/solutions/hands.html) in python notebook and performing EDA. We realized that extracting features using mediapipe from kaggle datasets is inducting many losses in the 128 datapoints. So we decided to make our own dataset using simple python script [app.py](ML/app.py) that uses opencv to extract 21 features in csv with 130 column. We generated [File CSV](https://drive.google.com/drive/folders/1G07Ni9bIfZDhmZNxN8wx6RIvtEKsr6OD) with 1061 datapoints in total from alphabetic (A-Z, 26) and numerical (0-10, 11) characters.  
 
 C. Training The Model  
-We then realized that some sign languages from alphabetic and numerical in BISINDO are the same (such as 0 and O, 2 and V)so we decided to classify all of them by building three different models:  
+We then realized that some sign languages from alphabetic and numerical in BISINDO are the same (such as 0 and O, 2 and V)so we decided to classify all of them by building three different [models](ML/final_model):  
 Class11(numerical only)    
 Class26(alphabetical only)    
 Class37(Both)   
-We used many techniques (Callbacks, Regularization, Dropout) to prevent overfitting and reached 90%++ accuracy on all models with a small portion of overfit. We tested our model prediction on prediction.py and the result was reasonably great! (since were only using small datasets). Our models could classify many BISINDO sign easily, but there are some cases where the sign is involving finger not directly seen from the camera and we missed some (Q, K, Y).
+We used many techniques (Callbacks, Regularization, Dropout) to prevent overfitting and reached 90%++ accuracy on all models with a small portion of overfit. We tested our model prediction on [prediction.py](ML/prediction.py) and the result was reasonably great! (since were only using small datasets). Our models could classify many BISINDO sign easily, but there are some cases where the sign is involving finger not directly seen from the camera and we missed some (Q, K, Y).
 
 ============================================================================================================================================
 
