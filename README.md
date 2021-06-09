@@ -13,14 +13,9 @@ Clone this repository by using this one
     https://github.com/khairul3/BISINDO-Sign-Language-Recognition.git
 ```    
 
-=============================================================================================================================================
 
 # Mobile Programming Android
 
-
-
-
-=============================================================================================================================================
 
 # Machine Learning
 Using Kaggle ISLBISINDO1 dataset, combined with self-made dataset which both of them are image dataset. Using mediapipe API to extract 21 Hand Landmarks feature from the image and generate csv dataset using python. Doing an EDA and creating 3 models using numeric, alphatebetic and both sign language characters. Deploy the model to cloud and android.
