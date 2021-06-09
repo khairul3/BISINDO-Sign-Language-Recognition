@@ -15,6 +15,11 @@ with hand recognition of BISINDO sign language with smartphone's camera.
 # Machine Learning
 Using Kaggle ISLBISINDO1 dataset, combined with self-made dataset which both of them are image dataset. Using mediapipe API to extract 21 Hand Landmarks feature from the image and generate csv dataset using python. Doing an EDA and creating 3 models using numeric, alphatebetic and both sign language characters. Deploy the model to cloud and android.
 
+Step by Step if you want to replicate our work
+A. Getting the dataset in kaggle
+![image](https://user-images.githubusercontent.com/46083543/121294110-0594ca00-c917-11eb-95fc-648e8242963f.png)
+In this project we use ISLBISINDO1 as our main dataset, that dataset contains a 27 classes of alphabet sign language. There's two directories in that dataset, traindir and testdir. Traindir contains 64 images per classes and testdir contains 16 images per classes. And also we create our own dataset for 
+
 
 
 
