@@ -3,6 +3,16 @@ IndoSign is an application that can be used for learning BISINDO sign languange 
 with hand recognition of BISINDO sign language with smartphone's camera. 
 
 
+### Installation 
+Clone this repository by using this one  
+```
+    https://github.com/khairul3/BISINDO-Sign-Language-Recognition.git
+```    
+ 
+## Dicoding Submission: Belajar Fundamental Aplikasi Android    
+ [![Platform](https://img.shields.io/badge/platform-Android-green.svg)](http://developer.android.com/index.html) [![Kotlin](https://img.shields.io/badge/kotlin-1.5.10-blue.svg)](http://kotlinlang.org) [![Gradle](https://img.shields.io/badge/gradle-7.0-%2366DCB8.svg)](https://developer.android.com/studio/releases/gradle-plugin) 
+
+
 =============================================================================================================================================
 
 # Mobile Programming Android
