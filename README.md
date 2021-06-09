@@ -13,8 +13,19 @@ Clone this repository by using this one
     https://github.com/khairul3/BISINDO-Sign-Language-Recognition.git
 ```    
 
+## Demo
+
+
 
 # Mobile Programming Android
+### Technology Used
+### UI
+- [Material Design](https://material.io/develop/android)
+- [Glide](https://github.com/bumptech/glide)
+- [Recycler View](https://github.com/codepath/android_guides/wiki/Using-the-RecyclerView)
+
+### Database
+- [Cloud Firestore](https://firebase.google.com/docs/firestore)
 
 
 # Machine Learning
