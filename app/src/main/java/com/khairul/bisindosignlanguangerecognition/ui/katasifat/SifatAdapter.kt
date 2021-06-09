@@ -10,8 +10,7 @@ import com.khairul.bisindosignlanguangerecognition.data.firestore.FirestoreAdapt
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
 import com.khairul.bisindosignlanguangerecognition.databinding.ItemRowSifatBinding
 
-class SifatAdapter(
-    query: Query,
+class SifatAdapter(query: Query,
     private val listener: SifatAdapterListener
 ) : FirestoreAdapter<SifatAdapter.SifatViewHolder>(query) {
 
@@ -42,8 +41,7 @@ class SifatAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SifatViewHolder {
-        val itemRowSifatBinding =
-            ItemRowSifatBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val itemRowSifatBinding = ItemRowSifatBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return SifatViewHolder(itemRowSifatBinding)
     }
 
