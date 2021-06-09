@@ -13,7 +13,10 @@ Clone this repository by using this one
     https://github.com/khairul3/BISINDO-Sign-Language-Recognition.git
 ```    
 
+
 ## Demo
+<img src="https://user-images.githubusercontent.com/79302158/121326610-4efc0e00-c945-11eb-9f49-cd8370f15b70.gif" width="200px">    <img src="https://user-images.githubusercontent.com/79302158/121326686-60451a80-c945-11eb-9ddd-3a5609b67b1d.gif" width="200px">    <img src="https://user-images.githubusercontent.com/79302158/121326724-6509ce80-c945-11eb-9530-2aa334332354.gif" width="200px">    <img src="https://user-images.githubusercontent.com/79302158/121326793-73f08100-c945-11eb-9866-2da35e2b0ed9.gif" width="200px">
+
 
 
 
