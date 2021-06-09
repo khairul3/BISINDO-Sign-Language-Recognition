@@ -77,7 +77,7 @@ with projects on Google Cloud Platform.
 - Create a collection by writing the collection id according to the data collection that you want
 will be entered.
 - Add Document and input document id or can select auto id
-- -Add field and enter field name, field type, and field value. For field value "image"
+- Add field and enter field name, field type, and field value. For field value "image"
 Enter the public access link for the uploaded image/gif file in Cloud Storage.
 
 
