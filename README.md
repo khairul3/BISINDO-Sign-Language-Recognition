@@ -13,7 +13,7 @@ with hand recognition of BISINDO sign language with smartphone's camera.
 =============================================================================================================================================
 
 # Machine Learning
-
+Using Kaggle ISLBISINDO1 dataset, combined with self-made dataset which both of them are image dataset. Using mediapipe API to extract 21 Hand Landmarks feature from the image and generate csv dataset using python. Doing an EDA and creating 3 models using numeric, alphatebetic and both sign language characters. Deploy the model to cloud and android.
 
 
 
@@ -51,7 +51,7 @@ will be entered.
 Enter the public access link for the uploaded image/gif file in Cloud Storage.
 
 
-# Deploying Machine Learning Model on Googel Cloud Function
+# Deploying Machine Learning Model on Google Cloud Function
 
 ![Deploy ML Architecture](https://user-images.githubusercontent.com/82069840/121268937-19293c00-c8e9-11eb-9dc0-d72abf5bab69.png)
 
@@ -78,3 +78,9 @@ for code is in "cloud/main.py" and "cloud/requirements.txt".
 • Improved prediction results to the user in the form of a response
 
 • Use the url from the trigger tab in the Cloud Function to make a request to the Cloud Function.
+
+===============================================================================
+*using the web application*
+Because we are still working on native android camera live recognition, temporarily, you can use webview to do live recognition on the web app
+that we deploy on GCP App Engine
+https://valid-dragon-312515.et.r.appspot.com/
