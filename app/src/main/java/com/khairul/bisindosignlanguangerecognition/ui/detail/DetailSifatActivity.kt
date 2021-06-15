@@ -7,8 +7,9 @@ import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
 import com.khairul.bisindosignlanguangerecognition.databinding.ActivityDetailBinding
+import com.skydoves.transformationlayout.TransformationAppCompatActivity
 
-class DetailSifatActivity : AppCompatActivity() {
+class DetailSifatActivity : TransformationAppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

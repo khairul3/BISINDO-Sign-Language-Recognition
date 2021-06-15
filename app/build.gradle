@@ -73,7 +73,7 @@ dependencies {
     // RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
-    //progressBar
-    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+    //layout
+    implementation "com.github.skydoves:transformationlayout:1.0.9"
 
 }
