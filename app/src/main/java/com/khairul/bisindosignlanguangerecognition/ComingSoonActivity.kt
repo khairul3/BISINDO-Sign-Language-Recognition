@@ -11,6 +11,8 @@ class ComingSoonActivity : AppCompatActivity() {
         actionbar!!.title = "Coming soon feature"
         actionbar.setDisplayHomeAsUpEnabled(true)
     }
+
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

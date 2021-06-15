@@ -1,8 +1,8 @@
 package com.khairul.bisindosignlanguangerecognition.ui.ucapan
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +11,6 @@ import com.google.firebase.firestore.Query
 import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
 import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailSifatActivity
-import com.khairul.bisindosignlanguangerecognition.ui.katasifat.SifatAdapter
 
 class UcapanActivity : AppCompatActivity(), UcapanAdapter.UcapanAdapterListener {
 

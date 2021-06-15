@@ -2,7 +2,6 @@ package com.khairul.bisindosignlanguangerecognition
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.MediaStore
 import android.view.Menu
 import android.widget.Button
 import android.widget.ImageView
@@ -39,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
 
         imgCam.setOnClickListener {
-           comingSoon()
+            comingSoon()
         }
 
         btnDictionary.setOnClickListener {
@@ -60,11 +59,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SifatActivity::class.java)
             startActivity(intent)
         }
-    }
-
-    private fun loadCam() {
-        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivity(intent)
     }
 
     private fun comingSoon() {

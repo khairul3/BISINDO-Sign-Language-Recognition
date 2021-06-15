@@ -14,7 +14,6 @@ class DictionaryAdapter(
     query: Query,
     private val listener: DictionaryAdapterListener
 ) : FirestoreAdapter<DictionaryAdapter.DictionaryViewHolder>(query) {
-
     class DictionaryViewHolder(
         private val binding: ItemRowDictionaryBinding
     ) : RecyclerView.ViewHolder(binding.root) {

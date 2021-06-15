@@ -3,35 +3,39 @@ package com.khairul.bisindosignlanguangerecognition.ui.dictionary
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
-import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
+import com.khairul.bisindosignlanguangerecognition.databinding.ActivityDictionaryBinding
 import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailDictionaryActivity
-import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailSifatActivity
 
 class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdapterListener {
 
     private lateinit var adapter: DictionaryAdapter
+    private lateinit var binding: ActivityDictionaryBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dictionary)
-
+        binding = ActivityDictionaryBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        showProgressBar(true)
         val actionbar = supportActionBar
         actionbar?.title = "ALFABET"
         actionbar?.setDisplayHomeAsUpEnabled(true)
-
         val query: Query = FirebaseFirestore.getInstance().collection("alfabet")
-        val recyclerView: RecyclerView = findViewById(R.id.rv_dic)
 
         adapter = DictionaryAdapter(query, this)
-        recyclerView.layoutManager = LinearLayoutManager(applicationContext)
-        recyclerView.setHasFixedSize(true)
-        recyclerView.adapter = adapter
-        recyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
+        with(binding) {
+            rvDic.layoutManager = LinearLayoutManager(applicationContext)
+            rvDic.setHasFixedSize(true)
+            rvDic.adapter = adapter
+            rvDic.layoutManager = GridLayoutManager(applicationContext, 2)
+            showProgressBar(false)
+        }
     }
 
     override fun onStart() {
@@ -53,5 +57,14 @@ class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdap
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    private fun showProgressBar(state: Boolean) {
+        with(binding) {
+            progressBar.isVisible = state
+            rvDic.isInvisible = state
+
+        }
+
     }
 }

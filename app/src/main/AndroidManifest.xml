@@ -20,7 +20,7 @@
         <activity android:name=".ui.detail.DetailDictionaryActivity" />
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name=".ui.SplashActivity"
             android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,16 +1,14 @@
 package com.khairul.bisindosignlanguangerecognition.ui.detail
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
-import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
 import com.khairul.bisindosignlanguangerecognition.databinding.ActivityDetailBinding
 
 class DetailSifatActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +16,7 @@ class DetailSifatActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        showProgressBar(true)
         val entity: Entity? = intent.getParcelableExtra("DETAIL_DATA")
         val actionbar = supportActionBar
         val sif = entity?.label
@@ -30,13 +29,21 @@ class DetailSifatActivity : AppCompatActivity() {
             Glide.with(this@DetailSifatActivity)
                 .load(entity?.gambar.toString())
                 .into(imgBackdrop)
-
+            showProgressBar(false)
         }
     }
-
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
     }
+
+    private fun showProgressBar(state: Boolean) {
+        with(binding) {
+            progressBar.isVisible = state
+            imgBackdrop.isInvisible = state
+            cardView.isInvisible = state
+        }
+    }
+
 }

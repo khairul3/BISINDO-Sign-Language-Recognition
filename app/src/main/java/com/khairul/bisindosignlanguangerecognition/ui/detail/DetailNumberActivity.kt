@@ -1,11 +1,10 @@
 package com.khairul.bisindosignlanguangerecognition.ui.detail
 
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
-import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
 import com.khairul.bisindosignlanguangerecognition.databinding.ActivityDetailBinding
 
@@ -17,6 +16,8 @@ class DetailNumberActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        showProgressBar(true)
 
         val entity: Entity? = intent.getParcelableExtra("DETAIL_DATA")
         val actionbar = supportActionBar
@@ -30,11 +31,20 @@ class DetailNumberActivity : AppCompatActivity() {
             Glide.with(this@DetailNumberActivity)
                 .load(entity?.gambar.toString())
                 .into(imgBackdrop)
+            showProgressBar(false)
         }
     }
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    private fun showProgressBar(state: Boolean) {
+        with(binding) {
+            progressBar.isVisible = state
+            imgBackdrop.isInvisible = state
+            cardView.isInvisible = state
+        }
     }
 }

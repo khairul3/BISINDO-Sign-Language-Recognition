@@ -1,4 +1,4 @@
-package com.khairul.bisindosignlanguangerecognition.ui.splash
+package com.khairul.bisindosignlanguangerecognition.ui
 
 import android.content.Intent
 import android.os.Bundle
