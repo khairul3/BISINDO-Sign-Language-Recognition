@@ -12,6 +12,20 @@
         android:layout_height="match_parent"
         android:background="@color/lightpurple">
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:indeterminateTint="@color/greenButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
         <ImageView
             android:id="@+id/img_cam"
             android:layout_width="match_parent"

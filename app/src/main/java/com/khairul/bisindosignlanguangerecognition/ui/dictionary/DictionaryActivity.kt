@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
+import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
 import com.khairul.bisindosignlanguangerecognition.databinding.ActivityDictionaryBinding
 import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailDictionaryActivity
@@ -26,7 +27,7 @@ class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdap
         val actionbar = supportActionBar
         actionbar?.title = "ALFABET"
         actionbar?.setDisplayHomeAsUpEnabled(true)
-        val query: Query = FirebaseFirestore.getInstance().collection("alfabet")
+        val query: Query = FirebaseFirestore.getInstance().collection(getString(R.string.alfa))
 
         adapter = DictionaryAdapter(query, this)
         with(binding) {
@@ -63,7 +64,6 @@ class DictionaryActivity : AppCompatActivity(), DictionaryAdapter.DictionaryAdap
         with(binding) {
             progressBar.isVisible = state
             rvDic.isInvisible = state
-
         }
 
     }

@@ -4,6 +4,10 @@
     <string name="number_english">ONE</string>
     <string name="home">Home</string>
     <string name="Camera">Camera</string>
+    <string name="alfa">alfabet</string>
+    <string name="kata_sifat">kata_sifat</string>
+    <string name="angka">angka</string>
+    <string name="ucapan">Ucapan</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="num">1</string>

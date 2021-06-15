@@ -20,10 +20,9 @@ class DetailDictionaryActivity : AppCompatActivity() {
 
         val entity: Entity? = intent.getParcelableExtra("DETAIL_DATA")
         val actionbar = supportActionBar
-        val dic = "HURUF ${entity?.label} "
+        val dic = "HURUF ${entity?.label}"
         actionbar?.title = dic
         actionbar?.setDisplayHomeAsUpEnabled(true)
-
         with(binding) {
             tvTitle.text = dic
             tvDesc.text = entity?.keterangan

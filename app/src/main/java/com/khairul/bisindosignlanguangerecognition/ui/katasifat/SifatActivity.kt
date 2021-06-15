@@ -3,34 +3,42 @@ package com.khairul.bisindosignlanguangerecognition.ui.katasifat
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.khairul.bisindosignlanguangerecognition.R
 import com.khairul.bisindosignlanguangerecognition.data.source.entity.Entity
+import com.khairul.bisindosignlanguangerecognition.databinding.ActivitySifatBinding
 import com.khairul.bisindosignlanguangerecognition.ui.detail.DetailSifatActivity
 
 class SifatActivity : AppCompatActivity(), SifatAdapter.SifatAdapterListener {
 
     private lateinit var adapter: SifatAdapter
+    private lateinit var binding: ActivitySifatBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sifat)
+        binding = ActivitySifatBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        showProgressBar(true)
+
 
         val actionbar = supportActionBar
         actionbar?.title = "KATA SIFAT"
         actionbar?.setDisplayHomeAsUpEnabled(true)
 
-        val query: Query = FirebaseFirestore.getInstance().collection("kata_sifat")
-        val recyclerView: RecyclerView = findViewById(R.id.rv_sifat)
+        val query: Query = FirebaseFirestore.getInstance().collection(getString(R.string.kata_sifat))
 
         adapter = SifatAdapter(query, this)
-        recyclerView.layoutManager = LinearLayoutManager(applicationContext)
-        recyclerView.setHasFixedSize(true)
-        recyclerView.adapter = adapter
-        recyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
+        with(binding) {
+            rvSifat.layoutManager = LinearLayoutManager(applicationContext)
+            rvSifat.setHasFixedSize(true)
+            rvSifat.adapter = adapter
+            rvSifat.layoutManager = GridLayoutManager(applicationContext, 2)
+            showProgressBar(false)
+        }
     }
 
     override fun onStart() {
@@ -52,5 +60,13 @@ class SifatActivity : AppCompatActivity(), SifatAdapter.SifatAdapterListener {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    private fun showProgressBar(state: Boolean) {
+        with(binding) {
+            progressBar.isVisible = state
+            rvSifat.isInvisible = state
+        }
+
     }
 }
